@@ -1,0 +1,37 @@
+---
+layout: default
+title:  tools
+---
+<div class="columns is-centered">
+    <h1 class="title">Tools</h1>
+</div>
+<hr>
+<br>
+<p>
+    <input class="input is-rounded" type="text" placeholder="Search for tool or +tag" id="searchTools">
+</p>
+<br>
+<div class="columns is-centered">
+    <button onclick="resetFilter()">Reset</button>
+</div>
+<br>
+<table class="table is-striped is-fullwidth is-hoverable" id="toolTime">
+    {% for tool in site.tools %}
+    <tr>
+        <td style="max-width: 25px;">{% if tool.os == "linux" %}<i class="fab fa-linux"></i>{% elsif tool.os == "windows" %}<i class="fab fa-windows"></i>{% else %}<i class="fab fa-linux"></i>&nbsp;&nbsp;&nbsp;<i class="fab fa-windows"></i>{% endif %}</td>
+        <td><a href="{{ tool.url }}">{{ tool.title }}</a></td>
+        <td>{% for tag in tool.tags %} <button onclick="queryHandler('+{{ tag }}');">{{ tag }}</button> {% endfor %}</td>
+    </tr>
+    {% endfor %}
+</table>
+<script>
+clickSearch();
+(function () {
+    var search = document.getElementById('searchTools');
+
+    search.addEventListener('input', function () {
+        var query = search.value.toUpperCase().trim();
+        queryHandler(query);
+    });
+})();
+</script>
