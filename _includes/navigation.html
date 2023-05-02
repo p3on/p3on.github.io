@@ -1,0 +1,25 @@
+<nav class="navbar is-spaced" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a href="/">
+        <img src="/assets/pics/peon.png" width="45" height="45">
+      </a>
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="basicNavbar" onclick="document.querySelector('.navbar-menu').classList.toggle('is-active');document.querySelector('.navbar-menu').classList.toggle('overlap');">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+    <div id="basicNavbar" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="">&nbsp;</a>      
+        {% for item in site.data.navigation %}
+        <a class="navbar-item" href="{{ item.link }}">
+          {{ item.name }}
+        </a>
+        {% endfor %}
+      </div>
+      <div class="navbar-end">
+        
+      </div>
+    </div>
+  </nav>
