@@ -1,5 +1,5 @@
 ---
-title:  tar
+title: tar
 os: linux
 tags:
  - linux
@@ -9,7 +9,7 @@ source: repo
 
 ## good2know
 
-Ever wondered why there the `tar` files have different endings? It usually hints the compression algoritm used:
+Ever wondered why the `tar` files have different endings? It usually hints the compression algoritm used:
 
 ```bash
 file archive1.tar.gz
@@ -50,8 +50,6 @@ tar -rf archive.tar newDir # add new files to archive
 gzip archive.tar
 ```
 
-## Sources
-
-- [1]: https://unix.stackexchange.com/questions/608207/how-to-use-multi-threading-for-creating-and-extracting-tar-xz
-- [2]: https://www.peterdavehello.org/2015/02/use-multi-threads-to-compress-files-when-taring-something/
-- [3]: https://unix.stackexchange.com/questions/13093/how-to-add-update-a-file-to-an-existing-tar-gz-archive
+[1] https://unix.stackexchange.com/questions/608207/how-to-use-multi-threading-for-creating-and-extracting-tar-xz
+[2] https://www.peterdavehello.org/2015/02/use-multi-threads-to-compress-files-when-taring-something/
+[3] https://unix.stackexchange.com/questions/13093/how-to-add-update-a-file-to-an-existing-tar-gz-archive
