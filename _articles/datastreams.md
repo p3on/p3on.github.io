@@ -5,6 +5,7 @@ tags:
  - linux
  - cli
  - basics
+short: A short collection about the pipes and streams of the linux operating system.
 ---
 
 Available streams in linux

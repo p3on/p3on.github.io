@@ -1,0 +1,19 @@
+---
+layout: default
+---
+<h1 class="title"><a href="/articles">..</a>/{{ page.title }}</h1>
+<br>
+<br>
+<div class="tagblock">
+    <ul>
+        {% for tag in page.tags %}
+        <li>
+            <a href="/articles#+{{ tag }}">{{ tag }}</a>
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+<hr>
+<div>
+    {{ content | markdownify }}
+</div>
