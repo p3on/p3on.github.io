@@ -12,6 +12,6 @@ source: repo
 Recursive search for files with the case insensitive `password` in it:
 
 ```bash
-grep -E '*password*' -r -l -i # r: l: i:
-```
-
+# R: greedy, n:line number, w:match whole word
+grep -Rnw --exculde-dir{*.zip} './' -e 'password'
+``````
