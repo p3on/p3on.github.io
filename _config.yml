@@ -16,6 +16,14 @@ defaults:
       path: '_articles'
     values:
       layout: article
+  - scope:
+      path: '_coding'
+    values:
+      layout: coding
+  - scope:
+      path: '_snippets'
+    values:
+      layout: snippets
 
 # Conversion
 markdown: Kramdown
