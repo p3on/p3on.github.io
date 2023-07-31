@@ -6,6 +6,8 @@ collections:
     output: true
   articles:
     output: true
+  snippets:
+    output: true
 
 defaults:
   - scope:
@@ -23,7 +25,7 @@ defaults:
   - scope:
       path: '_snippets'
     values:
-      layout: snippets
+      layout: snippet
 
 # Conversion
 markdown: Kramdown

@@ -5,3 +5,12 @@
 layout: default
 title: home
 ---
+
+<div class="columns is-centered">
+    <h1 class="title">w0rk w0rk</h1>
+</div>
+<div>
+under construction
+</div>
+{% for section in site.data.navigation %}
+{% endfor %}
