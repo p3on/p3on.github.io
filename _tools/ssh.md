@@ -42,3 +42,10 @@ Remote port forwarding:
 # Tunnel traffic from C to A via B, R indicates Remote2Local
 ssh -N -R <portC>:localhost:<localPort> <userB>@<ipB>
 ```
+
+Dynamic portforwarding via intermediate jumphost:
+
+```bash
+# requires double authentication, user on jumphost and clark on pivothost
+ssh -J john@jumphost -D 1080 clark@pivothost
+```

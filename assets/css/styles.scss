@@ -8,11 +8,11 @@
 //$hover: #7f0000;
 
 $maincolor: #000000;
-$mainaccent: #3D0000;
-$accent: #950101;
-$lighter: #FF0000;
-$marked: #f05545;
-$hover: #f05545;
+$mainaccent: #2B3499;
+$accent: #2B3499;
+$lighter: #FF6C22;
+$marked: #FF9209;
+$hover: #FFD099;
 
 @import "native.css";
 
@@ -39,6 +39,9 @@ h2 {
     display: block;
     font-size: 2em;
     font-family: 'Roboto', serif;
+    font-weight: bold !important;
+    padding-left: 10px;
+    background-color: beige;
 }
 
 code p {
@@ -155,5 +158,8 @@ tr:nth-child(even) {
 }
 
 .subtitle {
-    padding-top: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em !important;
+    margin-top: 1.5em;
 }

@@ -41,4 +41,4 @@ jq '.Policies[] | select(.AttachmentCount==0)'
 
 ## Sources
 
-- [1]: https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4
+[1] : [https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4](https://gist.github.com/olih/f7437fb6962fb3ee9fe95bda8d2c8fa4)

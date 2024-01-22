@@ -8,13 +8,17 @@ tags:
 source: repo/github
 ---
 
-## links / sources
-
-[1] : https://github.com/hashcat/hashcat <br>
-[2] : https://hashcat.net/wiki/doku.php?id=mask_attack <br>
-[3] : https://hashcat.net/wiki/doku.php?id=example_hashes
-
 ## commands
+
+Identify hashes:
+
+```bash
+# hashcat tries to match the hash
+hashcat hash.txt
+
+# try to find a hashmode given a specific hash
+hashcat --help | grep 'krbtgs'
+```
 
 Specify the matching hashtype via the correct `-m` value found in [3]. 
 
@@ -30,3 +34,9 @@ Cracking passwords without a file but with a mask-attack [2]:
 # 
 hashcat -m 0 -a 3 -1 ?l?u?d hash.txt ?1?1?1?1?1?1?1?1 --increment --increment-min 4
 ```
+
+## links / sources
+
+[1] : [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat) <br>
+[2] : [https://hashcat.net/wiki/doku.php?id=mask_attack](https://hashcat.net/wiki/doku.php?id=mask_attack) <br>
+[3] : [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)

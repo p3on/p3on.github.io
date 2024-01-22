@@ -18,6 +18,9 @@ curl -X GET 'https://example.com' -o webpage.html
 
 # display response header
 curl -X GET 'https://example.com' -i
+
+# use proxy, eg. burpsuite
+curl 'https://example.com/?cmd=id' -x http://127.0.0.1:8080
 ```
 
 Transmit data via `curl`:

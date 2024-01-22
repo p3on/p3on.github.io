@@ -50,6 +50,8 @@ tar -rf archive.tar newDir # add new files to archive
 gzip archive.tar
 ```
 
-[1] https://unix.stackexchange.com/questions/608207/how-to-use-multi-threading-for-creating-and-extracting-tar-xz
-[2] https://www.peterdavehello.org/2015/02/use-multi-threads-to-compress-files-when-taring-something/
-[3] https://unix.stackexchange.com/questions/13093/how-to-add-update-a-file-to-an-existing-tar-gz-archive
+## Sources
+
+[1] : [https://unix.stackexchange.com/questions/608207/how-to-use-multi-threading-for-creating-and-extracting-tar-xz](https://unix.stackexchange.com/questions/608207/how-to-use-multi-threading-for-creating-and-extracting-tar-xz) <br>
+[2] : [https://www.peterdavehello.org/2015/02/use-multi-threads-to-compress-files-when-taring-something](https://www.peterdavehello.org/2015/02/use-multi-threads-to-compress-files-when-taring-something) <br>
+[3] : [https://unix.stackexchange.com/questions/13093/how-to-add-update-a-file-to-an-existing-tar-gz-archive](https://unix.stackexchange.com/questions/13093/how-to-add-update-a-file-to-an-existing-tar-gz-archive)

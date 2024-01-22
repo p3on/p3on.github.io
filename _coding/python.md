@@ -4,13 +4,15 @@ tags:
  - code
  - guidelines
  - basics
+short: Basic coding principles with python
 ---
 
-## code style
+## Code Style
 
-- [peb8](https://peps.python.org/pep-0008/)
-- [peb20](https://peps.python.org/pep-0020/) - or `python -c 'import this'`
-
+- `peb8 `: [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/)
+- `peb20`: [https://peps.python.org/pep-0020/](https://peps.python.org/pep-0020/) - or `python -c 'import this'`
+<br>
+<br>
 > It's about ***consistency***, *BUT* readability stands above all!
 
 ## Basics
@@ -20,7 +22,7 @@ tags:
 - line length: code 79, text/docstring 72
 - encoding `UTF-8`
 
-```bash
+```python
 # imports: one per line, with absolute path on from multiple allowed
 import os
 import sys

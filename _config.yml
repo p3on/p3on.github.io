@@ -8,6 +8,8 @@ collections:
     output: true
   snippets:
     output: true
+  coding:
+    output: true
 
 defaults:
   - scope:
@@ -21,7 +23,7 @@ defaults:
   - scope:
       path: '_coding'
     values:
-      layout: coding
+      layout: code
   - scope:
       path: '_snippets'
     values:
