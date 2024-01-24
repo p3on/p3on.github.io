@@ -131,6 +131,10 @@ tr:nth-child(even) {
     background-color: $hover;
 }
 
+.task-list-item-checkbox {
+    margin-right: 6px;
+}
+
 .highlighter-coderay {
     overflow: auto;
 }
