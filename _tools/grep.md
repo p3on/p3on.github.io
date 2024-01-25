@@ -7,6 +7,8 @@ tags:
 source: repo
 ---
 
+> Keep in mind, `grep` does only apply the basic regexp set by default [1] - also with `-E` the behaviour is different to `ack` and what can be tested on the validators online [2], to have a similar/equal validation `-P` should be used!
+
 ## commands
 
 Recursive search for files with the case insensitive `password` in it:
@@ -21,10 +23,11 @@ grep -ro 'password'
 
 ## Specific greps
 
-> Special `regex` patterns for grabbing needles out of the haystack, verify patterns with [1]
+> Special `regex` patterns for grabbing needles out of the haystack, verify patterns with [2]
 
 - [x] mail
 - [x] IPs (IPv4)
+- [x] URLs
 - [ ] gnmap
 
 ```bash
@@ -33,8 +36,17 @@ grep -Eor "([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})" | sort | uniq
 
 # quick and dirty for ips (mail also reveal version numbers etc.)
 grep -Eor "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
+
+# grep for URLs (simple but works)
+grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"
+
+# more elaborate approach for URLs (check rfc 1738)
+grep -Po "https?:\/\/([\w]+[:@]){0,2}(([\w-]+)\.)+[a-zA-Z]{2,3}(:[0-9]{2,5})?(\/[\w-]+)*[\/\?#\w=%&-]*"
 ```
+
+-> Last regexp only works porperly with `-P`, the other options return only unsatisfying results (probably garbage in garbage out o.0)
 
 ## Sources
 
-[1] : [https://regex101.com/](https://regex101.com/) <br>
+[1] : [https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html](https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html#index-grep-programs) <br>
+[2] : [https://regex101.com/](https://regex101.com/) <br>
