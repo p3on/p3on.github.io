@@ -12,11 +12,3 @@ for file in ./*.zip; do
     unzip -d $file"_unzipped" $file;
 done
 ```
-<br>
-- Recursively search content of files
-
-```bash
-# R: greedy, n:line number, w:match whole word
-grep -Rnw --exculde-dir {*.zip} './' -e 'password'
-```
-

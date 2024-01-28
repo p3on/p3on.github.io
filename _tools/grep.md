@@ -15,7 +15,7 @@ Recursive search for files with the case insensitive `password` in it:
 
 ```bash
 # R: greedy, n:line number, w:match whole word
-grep -Rnw --exculde-dir{*.zip} './' -e 'password'
+grep -Rnw --exculde-dir {*.zip} './' -e 'password'
 
 # r: recursive, o:only matching
 grep -ro 'password'
@@ -31,16 +31,16 @@ grep -ro 'password'
 - [ ] gnmap
 
 ```bash
-# grep for mails in all files of dir (sort and uniq to reduce duplicates)
+# [MAIL] grep for mails in all files of dir (sort and uniq to reduce duplicates)
 grep -Eor "([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})" | sort | uniq
 
-# quick and dirty for ips (mail also reveal version numbers etc.)
+# [IPv4] quick and dirty for ips (mail also reveal version numbers etc.)
 grep -Eor "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
 
-# grep for URLs (simple but works)
+# [URL] grep for URLs (simple but works)
 grep -Eo "(http|https)://[a-zA-Z0-9./?=_%:-]*"
 
-# more elaborate approach for URLs (check rfc 1738)
+# [URL+] more elaborate approach for URLs (check rfc 1738)
 grep -Po "https?:\/\/([\w]+[:@]){0,2}(([\w-]+)\.)+[a-zA-Z]{2,3}(:[0-9]{2,5})?(\/[\w-]+)*[\/\?#\w=%&-]*"
 ```
 

@@ -5,6 +5,7 @@ tags:
  - guidelines
  - basics
 short: Basic coding principles with python
+toc: true
 ---
 
 ## Code Style
@@ -59,4 +60,15 @@ else:
     
 # Object comparison
 if isinstance(val, int):
+```
+
+## interactive interpreter
+
+```python
+# get information about datatypes of variables and functions
+help(callable)
+
+# get all attributes or functions you can call
+bla = 'asdf'
+dir(bla)
 ```
