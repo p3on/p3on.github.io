@@ -34,7 +34,7 @@ grep -ro 'password'
 # [MAIL] grep for mails in all files of dir (sort and uniq to reduce duplicates)
 grep -Eor "([[:alnum:]_.-]+@[[:alnum:]_.-]+?\.[[:alpha:].]{2,6})" | sort | uniq
 
-# [IPv4] quick and dirty for ips (mail also reveal version numbers etc.)
+# [IPv4] quick and dirty for ips (may also reveal version numbers etc.)
 grep -Eor "[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}"
 
 # [URL] grep for URLs (simple but works)
