@@ -18,6 +18,10 @@ source: repo
 podman run docker.io/python
 ```
 
+- building containers can take up quite a lot of space!
+
+Building a container image with a language model was taking ~10GB space at the end, but during building time `3 times` the space...
+
 ## commands
 
 - Show containers, pods images and more
