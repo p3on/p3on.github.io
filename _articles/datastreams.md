@@ -1,5 +1,6 @@
 ---
 title: standard I/O streams
+date: 2024-01-07
 os: linux
 tags:
  - linux
@@ -9,6 +10,7 @@ short: A short collection about the pipes and streams of the linux operating sys
 ---
 
 Available streams in linux
+
 - `stdin`: standard input
 - `stdout`: standard output
 - `stderr`: standard error

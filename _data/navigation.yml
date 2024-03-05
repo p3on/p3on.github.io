@@ -1,8 +1,8 @@
+- name: Home
+  link: /index.html
 - name: Tools
   link: /tools.html
 - name: Articles
   link: /articles.html
 - name: Snippets
   link: /snippets.html
-- name: Code
-  link: /code.html

@@ -1,3 +1,26 @@
+// toggle themes taken from: https://medium.com/@haxzie/dark-and-light-theme-switcher-using-css-variables-and-pure-javascript-zocada-dd0059d72fa2
+function setTheme(theme) {
+    localStorage.setItem('theme', theme);
+    window.parent.document.documentElement.classList = theme;
+}
+
+(function () {
+    if (localStorage.getItem('theme') === 'dark') {
+        setTheme('dark');
+    } else {
+        setTheme('light');
+    }
+})();
+
+function switchTheme() {
+    
+    if (localStorage.getItem('theme') === 'dark') {
+        setTheme('light');
+    } else {
+        setTheme('dark');
+    }     
+} // end toggle themes
+
 function queryHandler(query) {
     if (query.startsWith("+")) {
         filterTags(query);
@@ -5,7 +28,6 @@ function queryHandler(query) {
         filterTools(query);
     }
 }
-
 
 function filterTools(query) {
     var filter, table, i, toolName, tr;

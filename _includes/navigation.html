@@ -9,8 +9,14 @@
         <span aria-hidden="true"></span>
       </a>
     </div>
+    <div class="navbar-brand" style="padding-left: 10px;padding-top: 3px;">
+      <h1>p3on</h1>
+    </div>
     <div id="basicNavbar" class="navbar-menu">
-      <div class="navbar-start">
+      <div class="navbar-start">        
+      </div>
+      <div class="navbar-end">
+        <a class="navbar-item" onclick="switchTheme()"><i class="fa-solid fa-yin-yang"></i></a>
         <a href="">&nbsp;</a>      
         {% for item in site.data.navigation %}
         <a class="navbar-item" href="{{ item.link }}">
@@ -18,8 +24,5 @@
         </a>
         {% endfor %}
       </div>
-      <div class="navbar-end">
-        
-      </div>
     </div>
-  </nav>
+  </nav> 

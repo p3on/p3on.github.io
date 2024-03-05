@@ -58,7 +58,7 @@ ls /tmp/cache*
 sudo du -h -d 1 /tmp # cache should be located here -> delete
 ```
 
-- secrets in podman [1]
+- secrets in podman[^1]
 
 ```bash
 # secrets are protected, clean history after!
@@ -67,4 +67,4 @@ echo "yourSecret" | podman secret create MYSQL_PASSWORD -
 
 ## Sources
 
-- [1] : [https://www.redhat.com/sysadmin/new-podman-secrets-command](https://www.redhat.com/sysadmin/new-podman-secrets-command)
+[^1]: [https://www.redhat.com/sysadmin/new-podman-secrets-command](https://www.redhat.com/sysadmin/new-podman-secrets-command)

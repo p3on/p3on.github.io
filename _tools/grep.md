@@ -7,7 +7,7 @@ tags:
 source: repo
 ---
 
-> Keep in mind, `grep` does only apply the basic regexp set by default [1] - also with `-E` the behaviour is different to `ack` and what can be tested on the validators online [2], to have a similar/equal validation `-P` should be used!
+> Keep in mind, `grep` does only apply the basic regexp set by default[^1] - also with `-E` the behaviour is different to `ack` and what can be tested on the validators online[^2], to have a similar/equal validation `-P` should be used!
 
 ## commands
 
@@ -23,7 +23,7 @@ grep -ro 'password'
 
 ## Specific greps
 
-> Special `regex` patterns for grabbing needles out of the haystack, verify patterns with [2]
+> Special `regex` patterns for grabbing needles out of the haystack, verify patterns with regex101 or other tools[^2]
 
 - [x] mail
 - [x] IPs (IPv4)
@@ -48,5 +48,5 @@ grep -Po "https?:\/\/([\w]+[:@]){0,2}(([\w-]+)\.)+[a-zA-Z]{2,3}(:[0-9]{2,5})?(\/
 
 ## Sources
 
-[1] : [https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html](https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html#index-grep-programs) <br>
-[2] : [https://regex101.com/](https://regex101.com/) <br>
+[^1]: [https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html](https://www.gnu.org/software/grep/manual/html_node/grep-Programs.html#index-grep-programs)
+[^2]: [https://regex101.com/](https://regex101.com/)

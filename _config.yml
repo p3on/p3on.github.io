@@ -8,8 +8,6 @@ collections:
     output: true
   snippets:
     output: true
-  coding:
-    output: true
 
 defaults:
   - scope:
@@ -20,10 +18,6 @@ defaults:
       path: '_articles'
     values:
       layout: article
-  - scope:
-      path: '_coding'
-    values:
-      layout: code
   - scope:
       path: '_snippets'
     values:
@@ -36,9 +30,9 @@ highlighter: rouge
 
 kramdown:
   syntax_highlighter: rouge
-  # syntax_highlighter_opts: { line_numbers: table }
+#  syntax_highlighter_opts: { line_numbers: table }
 
-# theme: Minima
+#theme: jekyll-bulma
 
 commonmark:
   options: ["SMART", "FOOTNOTES"]

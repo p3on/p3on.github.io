@@ -1,63 +1,115 @@
 ---
+# needed section so jekyll will process this file
 ---
-//$maincolor: #a2a2a2;
-//$mainaccent: #888;
-//$accent: #b71c1c;
-//$lighter: #f05545;
-//$marked: #7f0000;
-//$hover: #7f0000;
+//colors
+$link: #b3143d;
+$maincolor: #131418;
+$fontheader: #eaeaea;
+$font: #c7bebe;
+$hover: #222222;
+$maincolor-lighter: #1e1f23;
 
-$maincolor: #000000;
-$mainaccent: #2B3499;
-$accent: #2B3499;
-$lighter: #FF6C22;
-$marked: #FF9209;
-$hover: #FFD099;
+/* light mode */
+//@media (prefers-color-scheme: light) {
+//    :root {
+//        --maincolor: #131418;
+//        --fontheader: #eaeaea;
+//        --font: #c7bebe;
+//        --hover: #222222;
+//        --maincolor-lighter: #1e1f23;
+//        --link : #b3143d;
+//    }
+//}
 
-@import "native.css";
+/* dark mode */
+//@media (prefers-color-scheme: dark) {
+//    :root {
+//        --maincolor: #131418;
+//        --fontheader: #eaeaea;
+//        --font: #c7bebe;
+//        --hover: #222222;
+//        --maincolor-lighter: #1e1f23;
+//        --link : #b3143d;
+//    }
+//}
 
-// base tags
+:root,
+    :root.light {
+        --maincolor: #eaeaea;
+        --fontheader: #000000;
+        --font: #525252;
+        --hover: #5e5e5e5e;
+        --maincolor-lighter: #c7bebe;
+        --link : #ff0266;
+    }
+
+    :root.dark {
+        --maincolor: #131418;
+        --fontheader: #eaeaea;
+        --font: #c7bebe;
+        --hover: #222222;
+        --maincolor-lighter: #1e1f23;
+        --link : #b3143d;
+    }
+
+@import "monokai.sublime.css";
+
+//elements
+html {
+    background-color: var(--maincolor);
+    color: var(--font);
+}
 
 body {
-    font-family: sans, sans-serif;
+    color: var(--font);
 }
 
 a {
-    text-decoration: none;
+    color: var(--link);
 }
 
 a:hover {
-    color: $accent;
+    color: var(--font);
 }
 
-a.navbar-item:hover {
-    background-color: $mainaccent;
-    color: $hover;
+blockquote {
+    color: var(--$font);
+    position: relative;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-left: 0.2em solid var(--link);
+    font-family: 'Courier New', serif;
+    margin-bottom: 1em;
+    background-color: var(--hover);
 }
 
-h2 {
-    display: block;
-    font-size: 2em;
-    font-family: 'Roboto', serif;
-    font-weight: bold !important;
-    padding-left: 10px;
-    background-color: beige;
+div {
+    background-color: var(--maincolor) !important;
 }
 
-code p {
-    padding-top: 0em;
+h3,h4,h5 {
+    color: var(--fontheader);
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
 }
 
-nav {
-    padding: 20px;
+hr {
+    height: 2px;
+    background-color: var(--hover);
 }
 
-p {
-    padding-top: 1em;
+code { // should be oriented at the highliting theme
+    background-color: #272822;
+    color: #ffffff;
 }
 
 pre {
     margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 pre code {
@@ -65,12 +117,8 @@ pre code {
     padding: 10px;
 }
 
-pre p {
-    padding-top: 0em;
-}
-
-.tagblock li {
-    display: inline-block;
+ol {
+    list-style-position: inside;
 }
 
 ul {
@@ -78,92 +126,97 @@ ul {
     list-style-position: inside;
 }
 
-blockquote {
-    position: relative;
-    padding-left: 2em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    border-left: 0.2em solid $lighter;
-    font-family: 'Roboto', serif;
-    margin-bottom: 1em;
+// classes
+.navbar {
+    background-color: var(--maincolor);
 }
 
-blockquote p {
-    padding-top: 0em;
+.navbar-item {
+    color: var(--font);
 }
 
-button {
-    background-color: #FFFFFF;
-    border: 1px solid $lighter;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    padding-left: 10px;
-    padding-right: 10px;
-    color: $lighter;
-}
-button:hover {
-    background-color: $hover;
-    cursor: pointer;
+a.navbar-item:hover {
+    background-color: var(--maincolor);
+    color: var(--link);
+    text-decoration: underline;
 }
 
-tr:nth-child(even) {
-    background: $lighter;
+.footnotes ol {
+    list-style-position: outside;
 }
 
 .hidden {
     visibility: collapse;
 }
 
-.header {
-    padding: 20px;
+.input {
+    background-color: var(--maincolor-lighter);
+    border-color: var(--maincolor-lighter);
+    color: var(--font);
 }
 
-.tagblock a {
-    border: 1px solid $lighter;
+.input:hover,
+.input:focus {
+    border-color: var(--maincolor-lighter);
+}
+
+.input::placeholder {
+    color: var(--font);
+    opacity: 1;
+}
+
+.subtitle {
+    color: var(--fontheader) ;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.table {
+    background-color: var(--maincolor) !important;
+}
+
+.table td {
+    border-bottom-color: var(--hover);
+}
+
+.table tr:hover {
+    background-color: var(--hover) !important;
+}
+
+.tag {
+    background-color: var(--maincolor) !important;
+    border: 1px solid var(--link);
     padding-top: 3px;
     padding-bottom: 3px;
     padding-left: 10px;
     padding-right: 10px;
-    color: $lighter;
+    color: var(--link) !important;
+}
+
+.tag:hover {
+    background-color: var(--hover) !important;
+    cursor: pointer;
+}
+
+.tagblock a {
+    border: 1px solid var(--link);
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 4px;
 }
 
 .tagblock a:hover {
-    background-color: $hover;
+    background-color: var(--hover) !important;
 }
 
-.task-list-item-checkbox {
-    margin-right: 6px;
+.tagblock li {
+    display: inline-block;
 }
 
-.highlighter-coderay {
-    overflow: auto;
-}
-
-.is-maincolored {
-    background-color: $maincolor;
-}
-
-.navbar {
-    background-color: $maincolor;
-    z-index: 0;
-}
-
-.navbar-brand a {
-    color: $hover;
-}
-
-.navbar-item {
-    color: $hover;
-}
-
-.overlap {
-    position: absolute;
-    width: 100%;
-}
-
-.subtitle {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
-    margin-bottom: 0.5em !important;
-    margin-top: 1.5em;
+.title {
+    color: var(--fontheader) ;
 }

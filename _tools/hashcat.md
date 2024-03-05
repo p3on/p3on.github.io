@@ -8,6 +8,8 @@ tags:
 source: repo/github
 ---
 
+Cracking hashes fast with hashcat[^1]
+
 ## commands
 
 Identify hashes:
@@ -20,7 +22,7 @@ hashcat hash.txt
 hashcat --help | grep 'krbtgs'
 ```
 
-Specify the matching hashtype via the correct `-m` value found in [3]. 
+Specify the matching hashtype via the correct `-m` value found in the hashcat wiki[^2]. 
 
 Crack hashes via wordlist:
 
@@ -28,15 +30,15 @@ Crack hashes via wordlist:
 hashcat -m 0 -a 0 hash.txt pw_list.txt
 ```
 
-Cracking passwords without a file but with a mask-attack [2]:
+Cracking passwords without a file but with a mask-attack [^3]:
 
 ```bash
 # 
 hashcat -m 0 -a 3 -1 ?l?u?d hash.txt ?1?1?1?1?1?1?1?1 --increment --increment-min 4
 ```
 
-## links / sources
+## sources
 
-[1] : [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat) <br>
-[2] : [https://hashcat.net/wiki/doku.php?id=mask_attack](https://hashcat.net/wiki/doku.php?id=mask_attack) <br>
-[3] : [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+[^1]: [https://github.com/hashcat/hashcat](https://github.com/hashcat/hashcat)
+[^2]: [https://hashcat.net/wiki/doku.php?id=example_hashes](https://hashcat.net/wiki/doku.php?id=example_hashes)
+[^3]: [https://hashcat.net/wiki/doku.php?id=mask_attack](https://hashcat.net/wiki/doku.php?id=mask_attack)
