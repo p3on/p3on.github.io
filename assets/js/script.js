@@ -12,8 +12,7 @@ function setTheme(theme) {
     }
 })();
 
-function switchTheme() {
-    
+function switchTheme() {    
     if (localStorage.getItem('theme') === 'dark') {
         setTheme('light');
     } else {

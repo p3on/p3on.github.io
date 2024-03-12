@@ -2,7 +2,7 @@
 title: Config
 
 collections:
-  tools:
+  cli-cs:
     output: true
   articles:
     output: true
@@ -11,9 +11,9 @@ collections:
 
 defaults:
   - scope:
-      path: '_tools'
+      path: '_cli-cs'
     values:
-      layout: tool
+      layout: cli-cs
   - scope:
       path: '_articles'
     values:
@@ -22,6 +22,8 @@ defaults:
       path: '_snippets'
     values:
       layout: snippet
+
+permalink: /:title:none
 
 # Conversion
 markdown: Kramdown
@@ -32,8 +34,21 @@ kramdown:
   syntax_highlighter: rouge
 #  syntax_highlighter_opts: { line_numbers: table }
 
-#theme: jekyll-bulma
-
 commonmark:
   options: ["SMART", "FOOTNOTES"]
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - setup.sh
+  - LICENSE
+
+plugins:
+  - jekyll-toc
+
+toc:
+  min_level: 1
+  max_level: 3
+  ordered_list: false

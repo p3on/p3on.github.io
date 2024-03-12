@@ -24,3 +24,4 @@ group :jekyll_plugins do
 end
 
 gem "rouge"
+gem "jekyll-toc"

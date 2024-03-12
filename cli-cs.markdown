@@ -1,9 +1,9 @@
 ---
 layout: default
-title: tools
+title: cli-cs
 ---
 <div class="columns is-centered">
-    <h1 class="title">Tools</h1>
+    <h1 class="title">cli-CS</h1>
 </div>
 <br>
 <p>
@@ -22,13 +22,13 @@ title: tools
 </div>
 <br>
 <table class="table is-fullwidth is-hoverable" id="toolTime">
-    {% for tool in site.tools %}
+    {% for cli in site.cli-cs %}
     <tr>
-        <td style="max-width: 25px;">{% if tool.os == "linux" %}<i class="fab fa-linux"></i>{% elsif tool.os ==
+        <td style="max-width: 25px;">{% if cli.os == "linux" %}<i class="fab fa-linux"></i>{% elsif cli.os ==
             "windows" %}<i class="fab fa-windows"></i>{% else %}<i class="fab fa-linux"></i>&nbsp;&nbsp;&nbsp;<i
                 class="fab fa-windows"></i>{% endif %}</td>
-        <td><a href="{{ tool.url }}">{{ tool.title }}</a></td>
-        <td>{% for tag in tool.tags %} <button class="tag" onclick="queryHandler('+{{ tag }}');">{{ tag }}</button> {%
+        <td><a href="{{ cli.url }}">{{ cli.title }}</a></td>
+        <td>{% for tag in cli.tags %} <button class="tag" onclick="queryHandler('+{{ tag }}');">{{ tag }}</button> {%
             endfor %}</td>
     </tr>
     {% endfor %}

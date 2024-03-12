@@ -1,8 +1,8 @@
 - name: Home
-  link: /index.html
-- name: Tools
-  link: /tools.html
+  link: /index
+- name: cli-CS
+  link: /cli-cs
 - name: Articles
-  link: /articles.html
+  link: /articles
 - name: Snippets
-  link: /snippets.html
+  link: /snippets

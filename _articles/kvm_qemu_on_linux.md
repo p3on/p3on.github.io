@@ -6,6 +6,7 @@ tags:
  - linux
  - vm
 short: Running kvm/qemu on linux with shared folder and access via VM hostname.
+toc: true
 ---
 
 Short writeup on how I got `kvm` and `qemu` running on linux with all the features one can expect (as known from virtualbox or vmware).

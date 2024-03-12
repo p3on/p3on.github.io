@@ -220,3 +220,35 @@ a.navbar-item:hover {
 .title {
     color: var(--fontheader) ;
 }
+
+// toc stuff
+#toc_container {
+    // general positioning
+    padding-left: 20px;
+    position: sticky;
+    top: 20px;
+}
+#toc {
+    // font and layout
+    border: 1px solid;
+    border-color: var(--maincolor-lighter);
+    border-radius: 4px;
+    padding: 0.25rem 0.75rem;
+    font-weight: 500;
+    list-style: none;
+}
+#toc li {
+    padding-left: 15px;
+    list-style: none;
+}
+#toc_div {
+    height: 45px;
+    border: 1px solid;
+    border-color: var(--maincolor-lighter);
+    border-radius: 4px;
+    background: var(--maincolor-lighter) !important;
+}
+#toc_head {
+    padding-left: 20px;
+    margin-top: 10px;
+}
