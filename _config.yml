@@ -39,8 +39,6 @@ commonmark:
   extensions: ["strikethrough", "autolink", "table", "tagfilter"]
 
 exclude:
-  - Gemfile
-  - Gemfile.lock
   - README.md
   - setup.sh
   - LICENSE
