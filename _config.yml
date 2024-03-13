@@ -1,5 +1,8 @@
 ---
-title: Config
+title: p3on
+author: p3on
+email: p3on@protonmail.com
+description: Personal page for collection of commands and projects or configuration on the things I am/was working on.
 
 collections:
   cli-cs:

@@ -1,5 +1,5 @@
 ---
-title:  binwalk
+title: binwalk
 os: linux
 tags:
  - basic

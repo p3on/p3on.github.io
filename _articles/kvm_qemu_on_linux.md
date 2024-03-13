@@ -90,4 +90,4 @@ sudo echo "mount -t virtiofs name_of_virtiofs /mnt/share" > /etc/fstab
 ## Sources
 
 [^1]:[https://libvirt.org/nss.html](https://libvirt.org/nss.html)
-[^2]: [https://dannyda.com/2020/10/22/how-to-fix-cant-resize-kali-linux-vm-screen-display-via-virt-viewer-running-on-proxmox-ve-pve-with-default-xfce4-desktop-environment/#4-Make-resize-fully-automatic](https://dannyda.com/2020/10/22/how-to-fix-cant-resize-kali-linux-vm-screen-display-via-virt-viewer-running-on-proxmox-ve-pve-with-default-xfce4-desktop-environment/#4-Make-resize-fully-automatic)
+[^2]:[https://dannyda.com/2020/10/22/how-to-fix-cant-resize-kali-linux-vm-screen-display-via-virt-viewer-running-on-proxmox-ve-pve-with-default-xfce4-desktop-environment/#4-Make-resize-fully-automatic](https://dannyda.com/2020/10/22/how-to-fix-cant-resize-kali-linux-vm-screen-display-via-virt-viewer-running-on-proxmox-ve-pve-with-default-xfce4-desktop-environment/#4-Make-resize-fully-automatic)

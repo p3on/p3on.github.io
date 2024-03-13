@@ -3,10 +3,14 @@ layout: default
 title: cli-cs
 ---
 <div class="columns is-centered">
-    <h1 class="title">cli-CS</h1>
+    <div class="column is-three-quarters">
+    <h1 class="title text-centered">cli-CS</h1>
+</div>
 </div>
 <br>
 <p>
+    <div class="columns is-centered">
+        <div class="column is-two-thirds">
 <div class="field">
     <p class="control has-icons-left">
         <input class="input" type="text" placeholder="Search for tool or +tag" id="searchTools">
@@ -33,6 +37,8 @@ title: cli-cs
     </tr>
     {% endfor %}
 </table>
+</div>
+</div>
 <script>
     clickSearch();
     (function () {

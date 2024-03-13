@@ -13,3 +13,7 @@ Import via `styles.scss`:
 ```yaml
 @import 'yourChosenStile.css';
 ```
+
+## Jekyll toc
+
+SOURCE: [https://github.com/allejo/jekyll-toc?tab=readme-ov-file](https://github.com/allejo/jekyll-toc?tab=readme-ov-file)

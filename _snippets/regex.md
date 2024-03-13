@@ -1,9 +1,14 @@
 ---
 title: regular expressions
+tags:
+ - basics
+ - parsing
+short: RegEx, examples expressions and some concepts explained.
 icon: <i class="fa-solid fa-2x fa-terminal"></i>
+toc: true
 ---
 
-> A collection of regexes [2]
+> Explanation[^1] and collection of regexes[^2]
 
 - Passwords, apikeys secrets and other token like strings (taken from [trufflehog example](https://github.com/trufflesecurity/trufflehog/blob/main/examples/generic.yml))
 
@@ -34,5 +39,5 @@ icon: <i class="fa-solid fa-2x fa-terminal"></i>
 
 ## Sources
 
-[1] : [https://www.regular-expressions.info/lookaround.html](https://www.regular-expressions.info/lookaround.html)<br>
-[2] : [https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json](https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json)
+[^1]:[https://www.regular-expressions.info/lookaround.html](https://www.regular-expressions.info/lookaround.html)
+[^2]:[https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json](https://github.com/dxa4481/truffleHogRegexes/blob/master/truffleHogRegexes/regexes.json)

@@ -1,0 +1,21 @@
+---
+layout: default
+title: snippets
+---
+<div class="columns is-centered">
+  <div class="column is-three-quarters">
+    <h1 class="title text-centered">Snippets</h1>
+    <hr>
+  </div>
+</div>
+<br>
+<div class="columns is-centered">
+  <div class="column is-two-thirds">
+    {% for snippet in site.snippets %}
+    <div>
+      <a href="{{ snippet.url }}"><b>{{ snippet.title }}</b></a><br>
+    </div>
+    <br>
+    {% endfor %}
+  </div>
+</div>

@@ -7,7 +7,6 @@ tags:
 short: Basic coding principles with python
 toc: true
 ---
-
 ## Code Style
 
 - `peb8 `: [https://peps.python.org/pep-0008/](https://peps.python.org/pep-0008/)

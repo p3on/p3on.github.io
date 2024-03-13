@@ -1,19 +1,34 @@
 ---
 layout: default
 ---
-<h1 class="title"><a href="/snippets">..</a>/{{ page.title }}</h1>
-<br>
-<br>
-<div class="tagblock">
-    <ul>
-        {% for tag in page.tags %}
-        <li>
-            <a href="/snippets#+{{ tag }}">{{ tag }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+<div class="columns is-centered">
+    <div class="column is-three-quarters">
+        <h1 class="title"><a href="/snippets">..</a>/{{ page.title }}</h1>
+        {{ page.date | date_to_long_string }}
+        <br>
+        <br>
+        <div class="tagblock">
+            <ul>
+                {% for tag in page.tags %}
+                <li>
+                    <a href="/snippets#+{{ tag }}">{{ tag }}</a>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+        <hr>
+    </div>
 </div>
-<hr>
-<div>
-    {{ content | markdownify }}
+<div class="columns is-centered">
+    <div class="column is-half">
+        {{ content | markdownify}}
+    </div>
+    <div class="column is-one-quarter">
+        <div id="toc_container">
+            <div id="toc_div">
+                <h3 id="toc_head">ToC</h3>
+                {% include toc.html html=content h_max=3 id="toc" %}                
+            </div>
+        </div>
+    </div>
 </div>

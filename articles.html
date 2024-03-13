@@ -1,0 +1,27 @@
+---
+layout: default
+title: articles
+---
+{% assign sorted = site.articles | sort: 'date' %}
+<div class="columns is-centered">
+  <div class="column is-three-quarters">
+    <h1 class="title text-centered">Articles</h1>
+  </div>
+</div>
+<br>
+<div class="columns is-centered">
+  <div class="column is-two-thirds">
+    {% assign previousyear = "" %}
+    {% for article in sorted reversed %}
+    {% capture year %}{{ article.date | date: "%Y" }}{% endcapture %}
+    {% if year != previousyear %}<h2>{{ year }}</h2>
+    <hr>{% endif %}
+    {% assign previousyear = year %}
+    <div>
+      <a href="{{ article.url }}"><b>{{ article.title }}</b></a><br>
+      {{ article.short }}
+    </div>
+    <br>
+    {% endfor %}
+  </div>
+</div>
